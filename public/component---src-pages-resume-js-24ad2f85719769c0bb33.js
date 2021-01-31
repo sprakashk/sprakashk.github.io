@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{F2CN:function(e,a,t){"use strict";t.r(a);var n=t("q1tI"),r=t.n(n),u=t("I/Ru"),l=t("vrFN");a.default=function(){return r.a.createElement(u.a,null,r.a.createElement(l.a,{title:"Resume"}),r.a.createElement("a",{href:"../resumes/Satyaprakash_Resume.pdf",download:!0},r.a.createElement("button",null,"Downlaod the Resume from here")))}}}]);
+//# sourceMappingURL=component---src-pages-resume-js-24ad2f85719769c0bb33.js.map
