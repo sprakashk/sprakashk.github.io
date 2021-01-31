@@ -19,7 +19,7 @@ const clientDeviceType = {
   tablet: "Tablet"
 };
 module.exports = {
-  pathPrefix: `/public`,
+  pathPrefix: `/`,
   siteMetadata: {
     title: `Satya`,
     description: `Demonstrating my work, services and interests.`,
