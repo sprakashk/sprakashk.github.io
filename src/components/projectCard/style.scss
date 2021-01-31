@@ -1,0 +1,24 @@
+.projects-container {
+  border-radius: 0.5em;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.projects-container .project-container:nth-child(3n) {
+  width: 100%;
+}
+.projects-container .project-container {
+  width: calc(50% - 2em);
+  border-radius: 0.5em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+}
+
+.tech-stack-text {
+  margin-right: 10px;
+}
