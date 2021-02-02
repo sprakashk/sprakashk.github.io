@@ -9,10 +9,10 @@ const HeroSection = ({ heroSectionData, children }) => {
       className="hero-container"
       style={{ backgroundImage: heroSectionData.bgImage }}
     >
-      <div class="hero-title-container">
+      <div className="hero-title-container">
         <h2>{heroSectionData.title}</h2>
       </div>
-      <div class="hero-subtitle-container">
+      <div className="hero-subtitle-container">
         <p>{heroSectionData.subTitle}</p>
       </div>
       {children}

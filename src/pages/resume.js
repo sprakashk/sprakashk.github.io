@@ -29,7 +29,12 @@ const ResumePage = () => {
       <HeroSection
         heroSectionData={data.site.siteMetadata.heroSectionData.resume}
       >
-        <a href={data.site.siteMetadata.resumeUrl} target="_blank" download>
+        <a
+          href={data.site.siteMetadata.resumeUrl}
+          target="_blank"
+          rel="noreferrer"
+          download
+        >
           <button>Click here for the Resume</button>
         </a>
       </HeroSection>
