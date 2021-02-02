@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{F2CN:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),r=a.n(n),l=a("Wbzz"),o=a("I/Ru"),u=a("vrFN");t.default=function(){var e=Object(l.useStaticQuery)("395734543");return console.log("data",e),r.a.createElement(o.a,null,r.a.createElement(u.a,{title:"Resume"}),r.a.createElement("a",{href:e.site.siteMetadata.resumeUrl,download:!0},r.a.createElement("button",null,"Downlaod the Resume from here")))}}}]);
+//# sourceMappingURL=component---src-pages-resume-js-2e9aa13e0fa90987d3f7.js.map

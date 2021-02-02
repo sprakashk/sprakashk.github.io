@@ -121,38 +121,49 @@ module.exports = {
       blogs: {
         bgImage: "",
         fgImage: "",
-        title: "",
-        subTitle: "",
+        title: "Blogs | Crafted with deep UI knowledge",
+        subTitle:
+          "I spent most of my time on MDN, Medium articles, Codepen, React etc. Here are some of blogs which i have written till now. More to come. Stay tuned",
         link: ""
       },
       about: {
         bgImage: "",
         fgImage: "",
-        title: "",
-        subTitle: "",
+        title: "Frontend Web Developer",
+        subTitle: "Having 4.5+ years of frontend web development experience",
         link: ""
       },
       contact: {
         bgImage: "",
         fgImage: "",
-        title: "",
-        subTitle: "",
+        title: "Let's chat",
+        subTitle:
+          "Drop me an email on sprakashk811@gmail.com and i will reply back asap",
         link: ""
       },
       resume: {
         bgImage: "",
         fgImage: "",
-        title: "",
-        subTitle: "",
+        title: "Get to know my frontend development journey better",
+        subTitle: "Check out my Resume below.",
         link: ""
       }
-    }
+    },
+    resumeUrl:
+      "https://drive.google.com/file/d/13KLTb702mi04T3mx6ICFCa24ax32rYQO/view?usp=sharing"
   },
 
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-sass`
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `resumes`,
+        path: `${__dirname}/src/resumes/`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,

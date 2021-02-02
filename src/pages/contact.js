@@ -1,15 +1,41 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Layout from "../components/layout/index"
-import SEO from "../components/seo"
+import Layout from "../components/layout/index";
+import SEO from "../components/seo";
+import HeroSection from "../components/heroSection/index";
+const ContactPage = () => {
+  const data = useStaticQuery(graphql`
+    query SiteContactQuery {
+      site {
+        siteMetadata {
+          projectDetails {
+            title
+            description
+            techStack
+            role
+          }
+          heroSectionData {
+            contact {
+              bgImage
+              fgImage
+              title
+              subTitle
+              link
+            }
+          }
+        }
+      }
+    }
+  `);
+  return (
+    <Layout>
+      <SEO title="Contact" />
+      <HeroSection
+        heroSectionData={data.site.siteMetadata.heroSectionData.contact}
+      />
+    </Layout>
+  );
+};
 
-const AboutPage = () => (
-  <Layout>
-    <SEO title="Contacts" />
-    <h1>Contacts</h1>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
-
-export default AboutPage
+export default ContactPage;

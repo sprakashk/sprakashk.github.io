@@ -1,17 +1,40 @@
 import React from "react";
-// import { Link } from "gatsby"
-
+import { useStaticQuery, graphql } from "gatsby";
+import HeroSection from "../components/heroSection/index";
 import Layout from "../components/layout/index";
 import SEO from "../components/seo";
 
-const AboutPage = () => (
-  <Layout>
-    <SEO title="Resume" />
+const ResumePage = () => {
+  const data = useStaticQuery(graphql`
+    query SiteResumeQuery {
+      site {
+        siteMetadata {
+          heroSectionData {
+            resume {
+              bgImage
+              fgImage
+              title
+              subTitle
+              link
+            }
+          }
+          resumeUrl
+        }
+      }
+    }
+  `);
+  return (
+    <Layout>
+      <SEO title="Resume" />
+      <HeroSection
+        heroSectionData={data.site.siteMetadata.heroSectionData.resume}
+      >
+        <a href={data.site.siteMetadata.resumeUrl} target="_blank" download>
+          <button>Click here for the Resume</button>
+        </a>
+      </HeroSection>
+    </Layout>
+  );
+};
 
-    <a href="../resumes/Satyaprakash_Resume.pdf" download>
-      <button>Downlaod the Resume from here</button>
-    </a>
-  </Layout>
-);
-
-export default AboutPage;
+export default ResumePage;

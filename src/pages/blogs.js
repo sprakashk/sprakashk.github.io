@@ -1,15 +1,35 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import HeroSection from "../components/heroSection/index";
+import Layout from "../components/layout/index";
+import SEO from "../components/seo";
 
-import Layout from "../components/layout/index"
-import SEO from "../components/seo"
+const BlogsPage = () => {
+  const data = useStaticQuery(graphql`
+    query SiteBlogsQuery {
+      site {
+        siteMetadata {
+          heroSectionData {
+            blogs {
+              bgImage
+              fgImage
+              title
+              subTitle
+              link
+            }
+          }
+        }
+      }
+    }
+  `);
+  return (
+    <Layout>
+      <SEO title="Blogs" />
+      <HeroSection
+        heroSectionData={data.site.siteMetadata.heroSectionData.blogs}
+      />
+    </Layout>
+  );
+};
 
-const AboutPage = () => (
-  <Layout>
-    <SEO title="Blogs" />
-    <h1>Blogs</h1>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
-
-export default AboutPage
+export default BlogsPage;
